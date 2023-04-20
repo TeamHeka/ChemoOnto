@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://chemonto.owl"
+         xmlns="http://chemonto.owl#">
+
+<owl:Ontology rdf:about="http://chemonto.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasCycle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Protocol"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+  <owl:inverseOf rdf:resource="#cycleOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cycleOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#Protocol"/>
+  <owl:inverseOf rdf:resource="#hasCycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCure">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#Cure"/>
+  <owl:inverseOf rdf:resource="#cureOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cureOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cure"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+  <owl:inverseOf rdf:resource="#hasCure"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAdministration">
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#DrugAdministration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAdministratedIn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasDrug">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="#Drug"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isDrugOf">
+  <rdfs:domain rdf:resource="#Drug"/>
+  <rdfs:range rdf:resource="#DrugAdministration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#realisationOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isRealisedIn">
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isComposedOfCycle">
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cycleOfLine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#Line"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#followedCycle">
+  <rdfs:domain rdf:resource="http://chemontotox.owl#Patient"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cycleIsFollowedBy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://chemontotox.owl#Patient"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#followedLine">
+  <rdfs:domain rdf:resource="http://chemontotox.owl#Patient"/>
+  <rdfs:range rdf:resource="#Line"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#lineIsFollowedBy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://chemontotox.owl#Patient"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isRelatedToRomIN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Drug"/>
+  <rdfs:range rdf:resource="http://www.romedi.fr/romedi/IN"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isRelatedToRomBNdosage">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Drug"/>
+  <rdfs:range rdf:resource="http://www.romedi.fr/romedi/BNdosage"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isRelatedToRomBN">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Drug"/>
+  <rdfs:range rdf:resource="http://www.romedi.fr/romedi/BN"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Protocol"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCycleDuration">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCycleNum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCyclePRCkey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCureDuration">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cure"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasProtocolName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasC1D1Date">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCNDNDate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLinePRCkey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDrugName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Drug"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDose">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasUnitSTR">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasUnitCode">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDayDrugAdm">
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isBolus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDoseNorm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCancerLocation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasReductionMotif">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPatBS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPatWeight">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDurationInHour">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDurationInMin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMissingValues">
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Cycle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Protocol">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cure">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DrugAdministration">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Drug">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AntiCancer">
+  <rdfs:subClassOf rdf:resource="#Drug"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Solvant">
+  <rdfs:subClassOf rdf:resource="#Drug"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AntiADE">
+  <rdfs:subClassOf rdf:resource="#Drug"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Line">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Protocol"/>
+    <rdf:Description rdf:about="#Cycle"/>
+    <rdf:Description rdf:about="#Cure"/>
+    <rdf:Description rdf:about="#DrugAdministration"/>
+    <rdf:Description rdf:about="#Drug"/>
+    <rdf:Description rdf:about="#Line"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
