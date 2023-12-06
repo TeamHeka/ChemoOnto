@@ -1,0 +1,358 @@
+LICLEUNIK|PRCLEUNIK|DCCLEUNIK|DOSE|UNITE|CODEVOIE|DUREEADM|DUREEADMIN|COMMENTADM|JOURADM|HEUREADM|CODEPDT|TYPELIGNE|COUTLGPR|DOSEMAXLI|NBJOURADMLI|VOLUMELI|MULTILIGNE|TYPEPROT|NOMPROT|DUREECYCLE|DUREETRT|BIBLIPROT|COMMENTPRO|SURVEILLAN|REMARQUES|NBCYCLEDEF|UTMAJPR|COUTPROT|MAXCYCLE|INFOPROT
+5777|922|6|400|2|IV|0|10| |ON|20|0|1|0,61272|0|1|0|0|1|LV 5 FU 2 simplifié|14|2| | |"NFS ECG avant C1
+Arrêt du 5FU en cas de douleur thoracique"| |6|503|39,88904|0| 
+5778|922|6|1200|2|IV|46|0| |ON|40|-1|1|39,27632|0|2|95|0|1|LV 5 FU 2 simplifié|14|2| | |"NFS ECG avant C1
+Arrêt du 5FU en cas de douleur thoracique"| |6|503|39,88904|0| 
+5779|922|-1|40|2|IV|0|10|A diluer dans 50 ml de NaCL 0,9%|ON|0|204843|2|0|0|1|0|0|1|LV 5 FU 2 simplifié|14|2| | |"NFS ECG avant C1
+Arrêt du 5FU en cas de douleur thoracique"| |6|503|39,88904|0| 
+5780|922|-1|20|3|IV|0|10| |ON|-15|17644|2|0|0|1|0|0|1|LV 5 FU 2 simplifié|14|2| | |"NFS ECG avant C1
+Arrêt du 5FU en cas de douleur thoracique"| |6|503|39,88904|0| 
+5781|922|-1|50|3|IV|0|10|rinçage après bolus de 5FU|ON|30|196285|3|0|0|1|0|0|1|LV 5 FU 2 simplifié|14|2| | |"NFS ECG avant C1
+Arrêt du 5FU en cas de douleur thoracique"| |6|503|39,88904|0| 
+18135|922|-1|8|3|IV|0|15|à diluer dans 50 ml de NaCl 0,9%|ON|-15|71253|2|0|20|1|0|0|1|LV 5 FU 2 simplifié|14|2| | |"NFS ECG avant C1
+Arrêt du 5FU en cas de douleur thoracique"| |6|503|39,88904|0| 
+5964|944|-1|50|3|IV|0|10|Rinçage APRES Bolus 5-FU|ON|170|196285|3|0|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+5965|944|-1|12|3|IV|0|10|Dans 50 ml de NaCl ou G5% (possible avec le le zophren)|ONN|-15|71253|2|0|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+5966|944|-1|8|3|IV|0|10|Dans 50 ml de G5% ou NaCl 0.9 % avec le solumédrol (méthylprednisolone)|ON|-15|139206|2|0|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+5959|944|6|400|2|IV|0|10| |ON|160|0|1|0,61272|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+5960|944|-1|40|2|IV|0|10|A diluer dans 50 ml de NaCl 0,9%|ON|150|204843|2|0|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+5961|944|31|85|2|IV|2|0|Ne pas melanger avec AF: passer en Y|ON|0|0|1|8,56035|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+5962|944|6|1200|2|IV|46|0| |ONN|180|-1|1|39,27632|0|2|95|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+5963|944|-1|50|3|IV|0|10|Rinçage APRES Oxaliplatine|ON|120|193173|3|0|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+7588|944|-1|1|13|IV|0|20|1g de Gluconate de Calcium (soit 10mL d'une ampoule de 10mL) dans 100mL de G5%|ON|-20|232489|2|0,133|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+7589|944|-1|1|13|IV|0|20|1g de Sulfate de Magnésium (soit 6,7mL d'une ampoule de 10mL) dans 100mL de G5%|ON|130|9998|2|0,163|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+7590|944|-1|1|13|IV|0|20|1g de Sulfate de Magnésium (soit 6,7mL d'une ampoule de 10mL) dans 100mL de G5%|ON|-20|9998|2|0,163|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+7591|944|-1|1|13|IV|0|20|1g de Gluconate de Calcium (soit 10mL d'une ampoule de 10mL) dans 100mL de G5%|ON|130|232489|2|0,133|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+22224|944|-1|5|3|IV|0|15|Dans 50mL de NaCl 0,9% avec la ranitidine|ONN|-30|17443|2|0|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+22225|944|-1|50|3|IV|0|15|Dans 50mL de NaCl 0,9% avec la polaramine|ONN|-30|106282|2|0|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+18109|944|-1|125|3|PO|0|0|A prendre 1h00 avant la chimiothérapie|ONN|-60|214296|2|5,105|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+18110|944|-1|80|3|PO|0|0| |NOO|0|214273|2|10,21|0|1|0|0|1|FOLFOX 4 Simplifié|14|3| | |"NFS ECG avant C1
+Neurologique"| |6|503|63,76439|0|+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+7187|1037|-1|8|3|PO|0|1| |NOO|-15|182283|2|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7188|1037|-1|20|3|IV|0|10|Dans 50mL de NaCl 0,9% avec Sétron|ONN|-15|71253|2|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7189|1037|-1|1000|3|PO|0|1| |ONN|-5|28145|2|0,036|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7190|1037|-1|5|3|IV|0|10|Dans 50mL de NaCl 0,9%|ONN|-14|17443|2|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7191|1037|-1|8|3|IV|0|10|Dans 50 ml de NaCl 0.9 % avec Déxaméthasone|ONN|-15|139206|2|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7192|1037|-1|50|3|IV|0|10|Rinçage APRES Rituximab|ONN|180|196285|3|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7195|1037|-1|50|3|IV|0|10| |ONN|-10|106282|2|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7184|1037|34|375|2|IV|6|0|1ère administration de Rituximab en 6h|ONN|0|-1|1|843,048|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7193|1037|86|40|2|PO|0|2|Cp dosés à 10mg|ONN|380|-1|1|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7194|1037|64|250|2|PO|0|2|Cp dosés à 50mg|NOO|0|-1|1|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7231|1037|86|40|2|PO|0|2|Cp dosés à 10mg|NOO|0|-1|1|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+7232|1037|64|250|2|PO|0|2|Cp dosés à 50mg|ONN|385|-1|1|0|0|1|0|0|1|MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3|28|3|"Keating et al. JCO 2005;23:4079-4088
+Wierda et al. JCO 2005.23:4070-4078"| | | |1|842|843,084|1|"Merci d'ajuster le dose des comprimés de Cyclophosphamide et de Fludarabine :
+   *Cp de Cyclophosphamide dosés à 50mg
+   *Cp de Fludarabine dosés à 10mg"
+18629|1574|-1|12|3|IV|0|15|Dans 50mL de NaCl 0,9%|ONNNNNNNNNNNNNO|-30|71253|2|0|20|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14918|1574|6|400|2|IV|0|10| |ON|50|0|1|0,61272|0|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14919|1574|6|1200|2|IV|47|0| |ONNNNNNNNNNNNNN|70|-1|1|39,27632|0|2|97|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14922|1574|-1|40|2|IV|0|10|A diluer dans 50 mL de NaCl 0,9%|ONNNNNNNNNNNNNO|40|204843|2|0|0|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14929|1574|-1|8|3|IV|0|10|Dans 50 ml de NaCl 0.9 %|ONNNNNNNNNNNNNO|-15|139206|2|0|0|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14925|1574|-1|50|3|IV|0|10|Rinçage APRES Mitomycine C|ON|30|196285|3|0|0|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14926|1574|6|400|2|IV|0|10| |NNNNNNNNNNNNNNO|50|-1|1|0,61272|0|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14927|1574|6|1200|2|IV|47|0| |NNNNNNNNNNNNNNO|70|-1|1|39,27632|0|2|97|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14928|1574|-1|50|3|IV|0|10|Rincage APRES 5FU bolus|ONNNNNNNNNNNNNO|60|196285|3|0|0|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+14924|1574|41|7|2|IV|0|30|Risque important d'Extravasation : Surveiller l'administration +++|ON|0|-1|1|51,3576|0|1|0|0|1|MITOMYCINE C J1-J28 - LV 5 FU2|28|15|"Thésaurus nationale de cancérologie digistive
+
+Seitz JF, Perrier H, Giovannini M, Bernardini D, Capodano G, Girodengo L, Bardou VJ. 5Fluorouracil, high dose folinic acid and mitomycin-C combination chemotherapy in previously treated patients with advanced colorectal carcinomas. J Chemotherapy 1998;10:258-65."| |"5FU : 
+Toxicite hematologique (PNN, plaquettes), digestive, mucite, cutanee (syndrome main-pied), cardiaque
+
+Mitomycine : 
+Adaptation posologique en fonction de la Cl Créat
+* >60mL/min : pas d'ajustement de dose
+* 10 à 60mL/min : 75% de la dose
+* <10mL/min : 50% de la dose"|"LV5FU2 + mitomycine C = mitomycine C 7mg/m2 en 15 minutes à J1 toutes les 4 semaines du LV5FU2 simplifié.
+
+Tous les 14 jours (28 j pour mitomycine) avec évaluation après 4 cures (2 mois) [70]."|4|842|131,13568|0|Dose de Mitomycine : Vérifier la Cl Créatinine (voir Surveillance)
+24441|2290|6|400|2|IV|0|10| |O|50|-1|1|0,61272|0|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24442|2290|6|1200|2|IV|46|0| |O|70|-1|1|39,27632|0|2|95|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24443|2290|-1|40|2|IV|0|10|A diluer dans 50 ml de NaCl 0,9%|O|40|204843|2|0|0|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24444|2290|-1|50|3|IV|0|10|Rinçage après panitumumab|O|30|196285|3|0|0|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24449|2290|-1|50|3|IV|0|15|Dans 50mL de NaCl 0,9% avec la polaramine|O|-30|106282|2|0|0|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24446|2290|92|500|2|IV|0|30|"La première cure : administration lente  5 mg/min soit 1 mL/min
+Les cures suivantes : 10 mg/min soit 2 mL/min"|O|0|-1|1|1511,2584|0|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24447|2290|-1|12|3|IV|0|15|Dans 50mL de NaCl 0,9% avec le sétron|O|-15|71253|2|0|20|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24448|2290|-1|5|3|IV|0|15|Dans 50mL de NaCl 0,9% avec la ranitidine|O|-30|17443|2|0|0|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
+24445|2290|-1|50|3|IV|0|10|Rinçage après bolus de 5FU|O|60|196285|3|0|0|1|0|0|1|LV5FU2 - CETUXIMAB|14|1| | |"NFS, créatinine, bilan hépatique avec bilirubine  avant C1+ ECG
+Diarrhée tardive++
+
+Administration de Panitumumab
+    * A H0 et H0+2h : Contrôle de la TA
+    * Vérifier l'absence de :
+        - Protéinurie : si BU>ou=2+ : Protéinurie des 24h -> Ok si <2g/24h, sinon pas de Panitumumab
+        - HTA non contrôlée (Diastolique <ou=90mm Hg et Systolique >ou=  160mm Hg)
+        - Pathologie cardiovasculaire ou rythmique sévère
+        - Pneumopathie interstitielle ou de fibrose pulmonaire
+        - Trouble de la coagulation, Hémorragie ou Chirurgie <28j
+        - Traitement récent (<10jours) par Anticoagulant (doses curatives) ou Aspirine (>325mg/j)
+
+"| |6|503|1551,14744|0|"+++ RECHERCHE du déficit en DPD si patient naïf de 5FU +++
+
++++ Contre indiquation de l'ATROPINE si adénome de la prostate ou glaucome à angle fermé +++"
