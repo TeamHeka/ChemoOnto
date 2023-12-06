@@ -59,6 +59,6 @@ cd src/ChemoOnto/
 python3 instantiatesChemoOntoWithFollowedLines.py -AC on -AA off -S off -R off
 ```
 
-## ChemoOnto structure and an example of its instantiation (simplified)
+## ChemoOnto structure and an example of its instantiation
 
 ![ChemoOnto](images/ChemoOnto_and_an_example_of_its_instantiation.png "ChemoOnto structure and example of instantiation")
