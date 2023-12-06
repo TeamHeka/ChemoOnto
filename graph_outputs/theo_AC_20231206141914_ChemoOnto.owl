@@ -1,0 +1,1355 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://chemonto.owl"
+         xmlns="http://chemonto.owl#"
+         xmlns:time="http://www.w3.org/2006/time#">
+
+<owl:Ontology rdf:about="http://chemonto.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasCycle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Protocol"/>
+  <rdfs:range rdf:resource="#TheoCycle"/>
+  <owl:inverseOf rdf:resource="#cycleOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cycleOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#TheoCycle"/>
+  <rdfs:range rdf:resource="#Protocol"/>
+  <owl:inverseOf rdf:resource="#hasCycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCure">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#Cure"/>
+  <owl:inverseOf rdf:resource="#cureOf"/>
+  <rdfs:domain rdf:resource="#TheoCycle"/>
+  <rdfs:range rdf:resource="#TheoCure"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cureOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cure"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+  <rdfs:domain rdf:resource="#TheoCure"/>
+  <rdfs:range rdf:resource="#TheoCycle"/>
+  <owl:inverseOf rdf:resource="#hasCure"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAdministration">
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#DrugAdministration"/>
+  <rdfs:domain rdf:resource="#TheoCycle"/>
+  <rdfs:range rdf:resource="#TheoDrugAdministration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAdministratedIn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+  <rdfs:range rdf:resource="#TheoCycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasDrug">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="#Drug"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isDrugOf">
+  <rdfs:domain rdf:resource="#Drug"/>
+  <rdfs:range rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="#TheoDrugAdministration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#realisationOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#TheoCycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isRealisedIn">
+  <rdfs:domain rdf:resource="#TheoCycle"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isComposedOfCycle">
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cycleOfLine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="#Line"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#followedCycle">
+  <rdfs:domain rdf:resource="http://chemontotox.owl/#Patient"/>
+  <rdfs:range rdf:resource="#Cycle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#cycleIsFollowedBy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://chemontotox.owl/#Patient"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#followedLine">
+  <rdfs:domain rdf:resource="http://chemontotox.owl/#Patient"/>
+  <rdfs:range rdf:resource="#Line"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#lineIsFollowedBy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://chemontotox.owl/#Patient"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Protocol"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCycleDuration">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#TheoCycle"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCycleNum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#TheoCycle"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCyclePRCkey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cycle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#TheoCycle"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCureDuration">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Cure"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#TheoCure"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasProtocolName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasC1D1Date">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCNDNDate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLinePRCkey">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Line"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDrugName">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Drug"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDose">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasUnitSTR">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDayDrugAdm">
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isBolus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDoseNorm">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCancerLocation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasReductionMotif">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPatBS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPatWeight">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDurationInHour">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDurationInMin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMissingValues">
+  <rdfs:domain rdf:resource="#DrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasUnitCode">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#TheoDrugAdministration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Cycle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Protocol">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TheoCycle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cure">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TheoCure">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DrugAdministration">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TheoDrugAdministration">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Drug">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AntiCancer">
+  <rdfs:subClassOf rdf:resource="#Drug"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Solvant">
+  <rdfs:subClassOf rdf:resource="#Drug"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AntiADE">
+  <rdfs:subClassOf rdf:resource="#Drug"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Line">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#CYCLE_922">
+  <rdf:type rdf:resource="#TheoCycle"/>
+  <cycleOf rdf:resource="#PRC_922"/>
+  <hasCure rdf:resource="#CURE_922"/>
+  <time:hasTime rdf:resource="#INT_CYCLE_922"/>
+  <hasAdministration rdf:resource="#ADM__0_AC922_6"/>
+  <hasAdministration rdf:resource="#ADM__1_AC922_6"/>
+  <hasCycleDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</hasCycleDuration>
+  <hasCyclePRCkey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">922</hasCyclePRCkey>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CYCLE_THEO_922</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CURE_922">
+  <rdf:type rdf:resource="#TheoCure"/>
+  <cureOf rdf:resource="#CYCLE_922"/>
+  <time:hasTime rdf:resource="#INT_CURE_922"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CURE_THEO_922</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PRC_922">
+  <rdf:type rdf:resource="#Protocol"/>
+  <hasCycle rdf:resource="#CYCLE_922"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LV 5 FU 2 simplifié</hasName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRC_THEO_922-LV 5 FU 2 simplifié</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CYCLE_922">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:inside rdf:resource="#DAY_922_1"/>
+  <time:inside rdf:resource="#DAY_922_2"/>
+  <time:inside rdf:resource="#DAY_922_3"/>
+  <time:inside rdf:resource="#DAY_922_4"/>
+  <time:inside rdf:resource="#DAY_922_5"/>
+  <time:inside rdf:resource="#DAY_922_6"/>
+  <time:inside rdf:resource="#DAY_922_7"/>
+  <time:inside rdf:resource="#DAY_922_8"/>
+  <time:inside rdf:resource="#DAY_922_9"/>
+  <time:inside rdf:resource="#DAY_922_10"/>
+  <time:inside rdf:resource="#DAY_922_11"/>
+  <time:inside rdf:resource="#DAY_922_12"/>
+  <time:inside rdf:resource="#DAY_922_13"/>
+  <time:inside rdf:resource="#DAY_922_14"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CYCLE_THEO_922</rdfs:label>
+  <time:hasXSDDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P14D</time:hasXSDDuration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CURE_922">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:intervalDuring rdf:resource="#INT_CYCLE_922"/>
+  <time:inside rdf:resource="#DAY_922_1"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CURE_THEO_922</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_1">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_2">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_3">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_4">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_5">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_6">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_7">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_8">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_9">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_10">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_11">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_12">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_13">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_922_14">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AC_6">
+  <rdf:type rdf:resource="#AntiCancer"/>
+  <isDrugOf rdf:resource="#ADM__0_AC922_6"/>
+  <isDrugOf rdf:resource="#ADM__1_AC922_6"/>
+  <isDrugOf rdf:resource="#ADM__0_AC944_6"/>
+  <isDrugOf rdf:resource="#ADM__1_AC944_6"/>
+  <isDrugOf rdf:resource="#ADM__0_AC1574_6"/>
+  <isDrugOf rdf:resource="#ADM__1_AC1574_6"/>
+  <isDrugOf rdf:resource="#ADM__2_AC1574_6"/>
+  <isDrugOf rdf:resource="#ADM__3_AC1574_6"/>
+  <isDrugOf rdf:resource="#ADM__0_AC2290_6"/>
+  <isDrugOf rdf:resource="#ADM__1_AC2290_6"/>
+  <hasDrugName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fluorouracile</hasDrugName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_Fluorouracile</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC922_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_922"/>
+  <time:hasTime rdf:resource="#DAY_922_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_922-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__1_AC922_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_922"/>
+  <time:hasTime rdf:resource="#DAY_922_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__1_AC_THEO_922-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CYCLE_944">
+  <rdf:type rdf:resource="#TheoCycle"/>
+  <cycleOf rdf:resource="#PRC_944"/>
+  <hasCure rdf:resource="#CURE_944"/>
+  <time:hasTime rdf:resource="#INT_CYCLE_944"/>
+  <hasAdministration rdf:resource="#ADM__0_AC944_6"/>
+  <hasAdministration rdf:resource="#ADM__1_AC944_6"/>
+  <hasAdministration rdf:resource="#ADM__0_AC944_31"/>
+  <hasCycleDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</hasCycleDuration>
+  <hasCyclePRCkey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">944</hasCyclePRCkey>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CYCLE_THEO_944</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CURE_944">
+  <rdf:type rdf:resource="#TheoCure"/>
+  <cureOf rdf:resource="#CYCLE_944"/>
+  <time:hasTime rdf:resource="#INT_CURE_944"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CURE_THEO_944</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PRC_944">
+  <rdf:type rdf:resource="#Protocol"/>
+  <hasCycle rdf:resource="#CYCLE_944"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FOLFOX 4 Simplifié</hasName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRC_THEO_944-FOLFOX 4 Simplifié</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CYCLE_944">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:inside rdf:resource="#DAY_944_1"/>
+  <time:inside rdf:resource="#DAY_944_2"/>
+  <time:inside rdf:resource="#DAY_944_3"/>
+  <time:inside rdf:resource="#DAY_944_4"/>
+  <time:inside rdf:resource="#DAY_944_5"/>
+  <time:inside rdf:resource="#DAY_944_6"/>
+  <time:inside rdf:resource="#DAY_944_7"/>
+  <time:inside rdf:resource="#DAY_944_8"/>
+  <time:inside rdf:resource="#DAY_944_9"/>
+  <time:inside rdf:resource="#DAY_944_10"/>
+  <time:inside rdf:resource="#DAY_944_11"/>
+  <time:inside rdf:resource="#DAY_944_12"/>
+  <time:inside rdf:resource="#DAY_944_13"/>
+  <time:inside rdf:resource="#DAY_944_14"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CYCLE_THEO_944</rdfs:label>
+  <time:hasXSDDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P14D</time:hasXSDDuration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CURE_944">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:intervalDuring rdf:resource="#INT_CYCLE_944"/>
+  <time:inside rdf:resource="#DAY_944_1"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CURE_THEO_944</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_1">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_2">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_3">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_4">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_5">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_6">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_7">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_8">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_9">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_10">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_11">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_12">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_13">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_944_14">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC944_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_944"/>
+  <time:hasTime rdf:resource="#DAY_944_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_944-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__1_AC944_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_944"/>
+  <time:hasTime rdf:resource="#DAY_944_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__1_AC_THEO_944-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AC_31">
+  <rdf:type rdf:resource="#AntiCancer"/>
+  <isDrugOf rdf:resource="#ADM__0_AC944_31"/>
+  <hasDrugName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxaliplatine</hasDrugName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_Oxaliplatine</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC944_31">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_31"/>
+  <isAdministratedIn rdf:resource="#CYCLE_944"/>
+  <time:hasTime rdf:resource="#DAY_944_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">85.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_944-Oxaliplatine</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CYCLE_1037">
+  <rdf:type rdf:resource="#TheoCycle"/>
+  <cycleOf rdf:resource="#PRC_1037"/>
+  <hasCure rdf:resource="#CURE_1037"/>
+  <time:hasTime rdf:resource="#INT_CYCLE_1037"/>
+  <hasAdministration rdf:resource="#ADM__0_AC1037_34"/>
+  <hasAdministration rdf:resource="#ADM__0_AC1037_86"/>
+  <hasAdministration rdf:resource="#ADM__1_AC1037_86"/>
+  <hasAdministration rdf:resource="#ADM__0_AC1037_64"/>
+  <hasAdministration rdf:resource="#ADM__1_AC1037_64"/>
+  <hasCycleDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasCycleDuration>
+  <hasCyclePRCkey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1037</hasCyclePRCkey>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CYCLE_THEO_1037</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CURE_1037">
+  <rdf:type rdf:resource="#TheoCure"/>
+  <cureOf rdf:resource="#CYCLE_1037"/>
+  <time:hasTime rdf:resource="#INT_CURE_1037"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CURE_THEO_1037</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PRC_1037">
+  <rdf:type rdf:resource="#Protocol"/>
+  <hasCycle rdf:resource="#CYCLE_1037"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3</hasName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRC_THEO_1037-MABTHERA 375 1er Cycle- FLUDARA 40 -ENDOXAN 250 Per os J1-J3</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CYCLE_1037">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:inside rdf:resource="#DAY_1037_1"/>
+  <time:inside rdf:resource="#DAY_1037_2"/>
+  <time:inside rdf:resource="#DAY_1037_3"/>
+  <time:inside rdf:resource="#DAY_1037_4"/>
+  <time:inside rdf:resource="#DAY_1037_5"/>
+  <time:inside rdf:resource="#DAY_1037_6"/>
+  <time:inside rdf:resource="#DAY_1037_7"/>
+  <time:inside rdf:resource="#DAY_1037_8"/>
+  <time:inside rdf:resource="#DAY_1037_9"/>
+  <time:inside rdf:resource="#DAY_1037_10"/>
+  <time:inside rdf:resource="#DAY_1037_11"/>
+  <time:inside rdf:resource="#DAY_1037_12"/>
+  <time:inside rdf:resource="#DAY_1037_13"/>
+  <time:inside rdf:resource="#DAY_1037_14"/>
+  <time:inside rdf:resource="#DAY_1037_15"/>
+  <time:inside rdf:resource="#DAY_1037_16"/>
+  <time:inside rdf:resource="#DAY_1037_17"/>
+  <time:inside rdf:resource="#DAY_1037_18"/>
+  <time:inside rdf:resource="#DAY_1037_19"/>
+  <time:inside rdf:resource="#DAY_1037_20"/>
+  <time:inside rdf:resource="#DAY_1037_21"/>
+  <time:inside rdf:resource="#DAY_1037_22"/>
+  <time:inside rdf:resource="#DAY_1037_23"/>
+  <time:inside rdf:resource="#DAY_1037_24"/>
+  <time:inside rdf:resource="#DAY_1037_25"/>
+  <time:inside rdf:resource="#DAY_1037_26"/>
+  <time:inside rdf:resource="#DAY_1037_27"/>
+  <time:inside rdf:resource="#DAY_1037_28"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CYCLE_THEO_1037</rdfs:label>
+  <time:hasXSDDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P28D</time:hasXSDDuration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CURE_1037">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:intervalDuring rdf:resource="#INT_CYCLE_1037"/>
+  <time:inside rdf:resource="#DAY_1037_1"/>
+  <time:inside rdf:resource="#DAY_1037_2"/>
+  <time:inside rdf:resource="#DAY_1037_3"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CURE_THEO_1037</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_1">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_2">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_3">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_4">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_5">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_6">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_7">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_8">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_9">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_10">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_11">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_12">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_13">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_14">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_15">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_16">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_17">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_18">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_19">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_20">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_21">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_22">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_23">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_24">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_25">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_26">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_27">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1037_28">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AC_34">
+  <rdf:type rdf:resource="#AntiCancer"/>
+  <isDrugOf rdf:resource="#ADM__0_AC1037_34"/>
+  <hasDrugName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rituximab</hasDrugName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_Rituximab</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC1037_34">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_34"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1037"/>
+  <time:hasTime rdf:resource="#DAY_1037_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">375.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_1037-Rituximab</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AC_86">
+  <rdf:type rdf:resource="#AntiCancer"/>
+  <isDrugOf rdf:resource="#ADM__0_AC1037_86"/>
+  <isDrugOf rdf:resource="#ADM__1_AC1037_86"/>
+  <hasDrugName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fludarabine PO</hasDrugName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_Fludarabine PO</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC1037_86">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_86"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1037"/>
+  <time:hasTime rdf:resource="#DAY_1037_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_1037-Fludarabine PO</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__1_AC1037_86">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_86"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1037"/>
+  <time:hasTime rdf:resource="#DAY_1037_2"/>
+  <time:hasTime rdf:resource="#DAY_1037_3"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__1_AC_THEO_1037-Fludarabine PO</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDayDrugAdm>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AC_64">
+  <rdf:type rdf:resource="#AntiCancer"/>
+  <isDrugOf rdf:resource="#ADM__0_AC1037_64"/>
+  <isDrugOf rdf:resource="#ADM__1_AC1037_64"/>
+  <hasDrugName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyclophosphamide PO</hasDrugName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_Cyclophosphamide PO</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC1037_64">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_64"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1037"/>
+  <time:hasTime rdf:resource="#DAY_1037_2"/>
+  <time:hasTime rdf:resource="#DAY_1037_3"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_1037-Cyclophosphamide PO</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDayDrugAdm>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__1_AC1037_64">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_64"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1037"/>
+  <time:hasTime rdf:resource="#DAY_1037_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__1_AC_THEO_1037-Cyclophosphamide PO</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CYCLE_1574">
+  <rdf:type rdf:resource="#TheoCycle"/>
+  <cycleOf rdf:resource="#PRC_1574"/>
+  <hasCure rdf:resource="#CURE_1574"/>
+  <time:hasTime rdf:resource="#INT_CYCLE_1574"/>
+  <hasAdministration rdf:resource="#ADM__0_AC1574_6"/>
+  <hasAdministration rdf:resource="#ADM__1_AC1574_6"/>
+  <hasAdministration rdf:resource="#ADM__2_AC1574_6"/>
+  <hasAdministration rdf:resource="#ADM__3_AC1574_6"/>
+  <hasAdministration rdf:resource="#ADM__0_AC1574_41"/>
+  <hasCycleDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasCycleDuration>
+  <hasCyclePRCkey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1574</hasCyclePRCkey>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CYCLE_THEO_1574</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CURE_1574">
+  <rdf:type rdf:resource="#TheoCure"/>
+  <cureOf rdf:resource="#CYCLE_1574"/>
+  <time:hasTime rdf:resource="#INT_CURE_1574"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CURE_THEO_1574</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PRC_1574">
+  <rdf:type rdf:resource="#Protocol"/>
+  <hasCycle rdf:resource="#CYCLE_1574"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MITOMYCINE C J1-J28 - LV 5 FU2</hasName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRC_THEO_1574-MITOMYCINE C J1-J28 - LV 5 FU2</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CYCLE_1574">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:inside rdf:resource="#DAY_1574_1"/>
+  <time:inside rdf:resource="#DAY_1574_2"/>
+  <time:inside rdf:resource="#DAY_1574_3"/>
+  <time:inside rdf:resource="#DAY_1574_4"/>
+  <time:inside rdf:resource="#DAY_1574_5"/>
+  <time:inside rdf:resource="#DAY_1574_6"/>
+  <time:inside rdf:resource="#DAY_1574_7"/>
+  <time:inside rdf:resource="#DAY_1574_8"/>
+  <time:inside rdf:resource="#DAY_1574_9"/>
+  <time:inside rdf:resource="#DAY_1574_10"/>
+  <time:inside rdf:resource="#DAY_1574_11"/>
+  <time:inside rdf:resource="#DAY_1574_12"/>
+  <time:inside rdf:resource="#DAY_1574_13"/>
+  <time:inside rdf:resource="#DAY_1574_14"/>
+  <time:inside rdf:resource="#DAY_1574_15"/>
+  <time:inside rdf:resource="#DAY_1574_16"/>
+  <time:inside rdf:resource="#DAY_1574_17"/>
+  <time:inside rdf:resource="#DAY_1574_18"/>
+  <time:inside rdf:resource="#DAY_1574_19"/>
+  <time:inside rdf:resource="#DAY_1574_20"/>
+  <time:inside rdf:resource="#DAY_1574_21"/>
+  <time:inside rdf:resource="#DAY_1574_22"/>
+  <time:inside rdf:resource="#DAY_1574_23"/>
+  <time:inside rdf:resource="#DAY_1574_24"/>
+  <time:inside rdf:resource="#DAY_1574_25"/>
+  <time:inside rdf:resource="#DAY_1574_26"/>
+  <time:inside rdf:resource="#DAY_1574_27"/>
+  <time:inside rdf:resource="#DAY_1574_28"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CYCLE_THEO_1574</rdfs:label>
+  <time:hasXSDDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P28D</time:hasXSDDuration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CURE_1574">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:intervalDuring rdf:resource="#INT_CYCLE_1574"/>
+  <time:inside rdf:resource="#DAY_1574_1"/>
+  <time:inside rdf:resource="#DAY_1574_15"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CURE_THEO_1574</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_1">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_2">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_3">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_4">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_5">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_6">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_7">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_8">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_9">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_10">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_11">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_12">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_13">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_14">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_15">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_16">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_17">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_18">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_19">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_20">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_21">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_22">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_23">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_24">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_25">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_26">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_27">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_1574_28">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC1574_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1574"/>
+  <time:hasTime rdf:resource="#DAY_1574_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_1574-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__1_AC1574_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1574"/>
+  <time:hasTime rdf:resource="#DAY_1574_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__1_AC_THEO_1574-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__2_AC1574_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1574"/>
+  <time:hasTime rdf:resource="#DAY_1574_15"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__2_AC_THEO_1574-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__3_AC1574_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1574"/>
+  <time:hasTime rdf:resource="#DAY_1574_15"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__3_AC_THEO_1574-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AC_41">
+  <rdf:type rdf:resource="#AntiCancer"/>
+  <isDrugOf rdf:resource="#ADM__0_AC1574_41"/>
+  <hasDrugName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitomycine C</hasDrugName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_Mitomycine C</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC1574_41">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_41"/>
+  <isAdministratedIn rdf:resource="#CYCLE_1574"/>
+  <time:hasTime rdf:resource="#DAY_1574_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_1574-Mitomycine C</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CYCLE_2290">
+  <rdf:type rdf:resource="#TheoCycle"/>
+  <cycleOf rdf:resource="#PRC_2290"/>
+  <hasCure rdf:resource="#CURE_2290"/>
+  <time:hasTime rdf:resource="#INT_CYCLE_2290"/>
+  <hasAdministration rdf:resource="#ADM__0_AC2290_6"/>
+  <hasAdministration rdf:resource="#ADM__1_AC2290_6"/>
+  <hasAdministration rdf:resource="#ADM__0_AC2290_92"/>
+  <hasCycleDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</hasCycleDuration>
+  <hasCyclePRCkey rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2290</hasCyclePRCkey>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CYCLE_THEO_2290</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CURE_2290">
+  <rdf:type rdf:resource="#TheoCure"/>
+  <cureOf rdf:resource="#CYCLE_2290"/>
+  <time:hasTime rdf:resource="#INT_CURE_2290"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CURE_THEO_2290</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PRC_2290">
+  <rdf:type rdf:resource="#Protocol"/>
+  <hasCycle rdf:resource="#CYCLE_2290"/>
+  <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LV5FU2 - CETUXIMAB</hasName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PRC_THEO_2290-LV5FU2 - CETUXIMAB</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CYCLE_2290">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:inside rdf:resource="#DAY_2290_1"/>
+  <time:inside rdf:resource="#DAY_2290_2"/>
+  <time:inside rdf:resource="#DAY_2290_3"/>
+  <time:inside rdf:resource="#DAY_2290_4"/>
+  <time:inside rdf:resource="#DAY_2290_5"/>
+  <time:inside rdf:resource="#DAY_2290_6"/>
+  <time:inside rdf:resource="#DAY_2290_7"/>
+  <time:inside rdf:resource="#DAY_2290_8"/>
+  <time:inside rdf:resource="#DAY_2290_9"/>
+  <time:inside rdf:resource="#DAY_2290_10"/>
+  <time:inside rdf:resource="#DAY_2290_11"/>
+  <time:inside rdf:resource="#DAY_2290_12"/>
+  <time:inside rdf:resource="#DAY_2290_13"/>
+  <time:inside rdf:resource="#DAY_2290_14"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CYCLE_THEO_2290</rdfs:label>
+  <time:hasXSDDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">P14D</time:hasXSDDuration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#INT_CURE_2290">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#ProperInterval"/>
+  <time:intervalDuring rdf:resource="#INT_CYCLE_2290"/>
+  <time:inside rdf:resource="#DAY_2290_1"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INT_CURE_THEO_2290</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_1">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_2">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_3">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_4">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_5">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_6">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_7">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_8">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_9">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_10">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_11">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_12">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_13">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DAY_2290_14">
+  <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC2290_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_2290"/>
+  <time:hasTime rdf:resource="#DAY_2290_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_2290-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__1_AC2290_6">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_6"/>
+  <isAdministratedIn rdf:resource="#CYCLE_2290"/>
+  <time:hasTime rdf:resource="#DAY_2290_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2400.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__1_AC_THEO_2290-Fluorouracile</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AC_92">
+  <rdf:type rdf:resource="#AntiCancer"/>
+  <isDrugOf rdf:resource="#ADM__0_AC2290_92"/>
+  <hasDrugName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cétuximab</hasDrugName>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AC_Cétuximab</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ADM__0_AC2290_92">
+  <rdf:type rdf:resource="#TheoDrugAdministration"/>
+  <hasDrug rdf:resource="#AC_92"/>
+  <isAdministratedIn rdf:resource="#CYCLE_2290"/>
+  <time:hasTime rdf:resource="#DAY_2290_1"/>
+  <hasDose rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasDose>
+  <hasUnitSTR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg/m²</hasUnitSTR>
+  <hasUnitCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasUnitCode>
+  <hasDurationInHour rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasDurationInHour>
+  <hasDurationInMin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasDurationInMin>
+  <isBolus rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBolus>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADM__0_AC_THEO_2290-Cétuximab</rdfs:label>
+  <hasDayDrugAdm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasDayDrugAdm>
+</owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Protocol"/>
+    <rdf:Description rdf:about="#Cycle"/>
+    <rdf:Description rdf:about="#TheoCycle"/>
+    <rdf:Description rdf:about="#Cure"/>
+    <rdf:Description rdf:about="#TheoCure"/>
+    <rdf:Description rdf:about="#DrugAdministration"/>
+    <rdf:Description rdf:about="#TheoDrugAdministration"/>
+    <rdf:Description rdf:about="#Drug"/>
+    <rdf:Description rdf:about="#Line"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
