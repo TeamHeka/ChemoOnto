@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://ontotox.owl"
+         xmlns="http://ontotox.owl#">
+
+<owl:Ontology rdf:about="http://ontotox.owl"/>
+
+<owl:ObjectProperty rdf:about="#hasGrade">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="#Grade"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#associatedWithTreatment">
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="#Drug"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isRelatedToPatient">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://chemontotox.owl#Patient"/>
+  <owl:inverseOf rdf:resource="#isAffectedBy"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAffectedBy">
+  <rdfs:domain rdf:resource="http://chemontotox.owl#Patient"/>
+  <rdfs:range rdf:resource="#ChemotherapyToxicity"/>
+  <owl:inverseOf rdf:resource="#isRelatedToPatient"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#isHypothetical">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#isNegative">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#concernsPatient">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasValueInText">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasValueInQST">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasValueInTable">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#comesFrom">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ChemotherapyToxicity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#ChemotherapyToxicity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade0">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade1">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade2">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade3">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade4">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Grade5">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GradeNull">
+  <rdfs:subClassOf rdf:resource="#Grade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Qualifier">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Drug">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#ChemotherapyToxicity"/>
+    <rdf:Description rdf:about="#Qualifier"/>
+    <rdf:Description rdf:about="#Drug"/>
+    <rdf:Description rdf:about="#Grade"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
