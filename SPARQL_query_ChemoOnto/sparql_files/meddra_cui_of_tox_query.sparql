@@ -1,0 +1,21 @@
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rom: <http://www.romedi.fr/romedi/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tox: <http://ontotox.owl#>
+PREFIX chemtox: <http://chemontotox.owl#>
+PREFIX chem: <http://chemonto.owl#>
+PREFIX pym: <http://PYM/>
+PREFIX pcui: <http://PYM/CUI/>
+prefix pmdr: <http://PYM/MDR/>
+
+SELECT ?tox_id ?type_cui ?type_mdr
+	{
+    ?tox_id tox:hasGrade ?grade.
+    ?tox_id a ?type_mdr.
+    ?tox_id a ?type_cui.
+    FILTER( STRSTARTS(STR(?type_cui),str(pcui:)))
+    FILTER( STRSTARTS(STR(?type_mdr),str(pmdr:)))
+    FILTER(?tox_id=<http://ontotox.owl/#6892_QSTQN55083__01.07_(55083)_Fièvre>)
+	}

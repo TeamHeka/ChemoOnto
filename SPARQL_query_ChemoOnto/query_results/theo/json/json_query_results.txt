@@ -1,0 +1,2 @@
+Query result in json format concerning theoretical protocols are stored in this repository.
+Consult config file if you want to change the path.

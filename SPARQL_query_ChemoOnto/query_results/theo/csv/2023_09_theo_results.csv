@@ -1,0 +1,5 @@
+drugAdm,PRCKEY,PRCNAME,drugLabel,dose,romINind,romINlabel,cycleDuration,dayAdmSTR,is_bolus,unit_code
+http://chemonto.owl/#ADM__0_AC1016_6,1016,FOLFIRINOX,AC_Fluorouracile,2400.0,http://www.romedi.fr/romedi/INof3l4lucfe83bcrsh9sal7rf0nihsvp9,FLUOROURACILE,P14D,1,false,2
+http://chemonto.owl/#ADM__1_AC1016_6,1016,FOLFIRINOX,AC_Fluorouracile,400.0,http://www.romedi.fr/romedi/INof3l4lucfe83bcrsh9sal7rf0nihsvp9,FLUOROURACILE,P14D,1,true,2
+http://chemonto.owl/#ADM__0_AC1016_31,1016,FOLFIRINOX,AC_Oxaliplatine,85.0,http://www.romedi.fr/romedi/INqfkh4i531eoq675gm1uaf0qgtf5c0q98,OXALIPLATINE,P14D,1,false,2
+http://chemonto.owl/#ADM__0_AC1016_16,1016,FOLFIRINOX,AC_Irinotecan,180.0,http://www.romedi.fr/romedi/IN4tghn283uds8sgf0lk8jcjk3f3vq5dgp,IRINOTÉCAN,P14D,1,false,2

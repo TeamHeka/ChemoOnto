@@ -1,0 +1,24 @@
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rom: <http://www.romedi.fr/romedi/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tox: <http://ontotox.owl#>
+PREFIX chemtox: <http://chemontotox.owl/#>
+PREFIX chem: <http://chemonto.owl#>
+
+SELECT  ?adm ?drug_ind ?drug_label ?rom_ing ?rom_ing_label ?drug_dose ?is_bolus ?adm_date ?unit_str ?location
+	{
+    ?cycle chem:hasAdministration ?adm.
+    ?adm chem:hasDrug ?drug_ind.
+    ?drug_ind rdfs:label ?drug_label.
+    ?drug_ind chem:isRelatedToRomIN ?rom_ing.
+    ?rom_ing rdfs:label ?rom_ing_label.
+    ?adm chem:hasDoseNorm ?drug_dose.
+    ?adm chem:isBolus ?is_bolus.
+    ?adm time:hasTime ?day_adm.
+    ?day_adm time:inXSDDate ?adm_date.
+    ?adm chem:hasUnitSTR ?unit_str.
+    ?adm chem:hasCancerLocation ?location
+    FILTER(?cycle=<http://chemonto.owl/#CYCLE_1016_305019777_2020-03-24_2>)
+	}

@@ -1,0 +1,57 @@
+derive_results:
+  csv_dirname: ../derive_results/csv/
+  json_dirname: ../derive_results/json/
+log_files:
+  d2_before_d1: ../log_files/d2_before_d1.csv
+  dir: ../log_files/
+  empty_sparql_res: ../log_files/empty_sparql_res.csv
+  log_file_inf_0: ../log_files/log_file_inf_0.csv
+  no_theo_prckey: ../log_files/no_theo_PRCKEY.csv
+  patnum_admid_of_dose_inf_0: ../log_files/patnum_admid_of_dose_inf_0.csv
+query_results:
+  all_infos_by_pat_filename: all_infos_by_pat
+  all_infos_filename: all_infos
+  csv_foll: ../query_results/foll/csv_files/
+  csv_theo: ../query_results/theo/csv_files/
+  foll_adms_filename: adms_of_cycle_CYCLE_1016_305019777_2020-03-24_2
+  foll_cycles_filename: cycles_of_line_LINE_3565485833_2017-08-22_2198
+  foll_lines_filename: lines_of_pat_3565485833
+  foll_pats_filename: 20230912164726_pats_of_chemonto
+  json_foll: ../query_results/foll/json_files/
+  json_theo: ../query_results/theo/json_files/
+  meddra_cui_filename: meddra_cui_of_tox_QSTQN55083
+  theo_filename: theo_1016
+  tox_filename: tox_in_cycle_CYCLE_2198_3565485833_2017-08-22_2
+request_params:
+  headers_csv:
+    Accept: text/csv; charset=utf-8
+    Content-type: application/x-www-form-urlencoded
+  headers_json:
+    Accept: application/sparql-results+json
+    Content-type: application/x-www-form-urlencoded
+  proxies:
+    http: null
+    https: null
+  url: http://localhost:7200/repositories/ChemoOnto_gitLab
+sparql:
+  adms_of_cycle_query: ../sparql_files/adms_of_cycle_query.sparql
+  all_infos: ../sparql_files/VAL_all_infos.sparql
+  all_infos_by_pat: ../sparql_files/VAL_res_by_pat.sparql
+  cycles_of_line_query: ../sparql_files/cycles_of_line_query.sparql
+  lines_of_pat_query: ../sparql_files/lines_of_pat_query.sparql
+  meddra_cui_of_tox_query: ../sparql_files/meddra_cui_of_tox_query.sparql
+  p_enc_adms_of_cycle_query: ../sparql_files/p_enc_adms_of_cycle_query.sparql
+  p_enc_cycles_of_line_query: ../sparql_files/p_enc_cycles_of_line_query.sparql
+  p_enc_lines_of_pat_query: ../sparql_files/p_enc_lines_of_pat_query.sparql
+  p_enc_pats_of_chemonto_query: ../sparql_files/p_enc_pats_of_chemonto_query.sparql
+  p_encoded_all_infos: ../sparql_files/p_encoded_VAL_all_infos.sparql
+  p_encoded_all_infos_by_pat: ../sparql_files/p_encoded_VAL_res_by_pat.sparql
+  p_encoded_meddra_cui_of_tox_query: ../sparql_files/p_encoded_meddra_cui_of_tox_query.sparql
+  p_encoded_theo_query: ../sparql_files/p_encoded_theo_query.sparql
+  p_encoded_tox_in_cycle_query: ../sparql_files/p_encoded_theo_query.sparql
+  pats_of_chemonto_query: ../sparql_files/pats_of_chemonto_query.sparql
+  theo_query: ../sparql_files/theo_query.sparql
+  tox_in_cycle_query: ../sparql_files/tox_in_cycle_query.sparql
+tox_results:
+  csv_dirname: ../tox_results/csv/
+  json_dirname: ../tox_results/json/

@@ -1,0 +1,21 @@
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rom: <http://www.romedi.fr/romedi/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tox: <http://ontotox.owl#>
+PREFIX chemtox: <http://chemontotox.owl/#>
+PREFIX chem: <http://chemonto.owl#>
+
+SELECT  ?cycle ?cycle_label ?cycle_num ?cycle_start_date ?cycle_stop_date
+		{
+    	?line chem:isComposedOfCycle ?cycle.
+    	?cycle rdfs:label ?cycle_label.
+    	?cycle chem:hasCycleNum ?cycle_num.
+    	?cycle time:hasTime ?int_cycle.
+		?int_cycle time:hasBeginning ?cycle_start.
+    	?cycle_start time:inXSDDate ?cycle_start_date.
+		?int_cycle time:hasEnd ?cycle_stop.
+    	?cycle_stop time:inXSDDate ?cycle_stop_date.
+    	FILTER(?line=<http://chemonto.owl/#LINE_3565485833_2017-08-22_2198>)
+		}

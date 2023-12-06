@@ -1,0 +1,2 @@
+Query result on csv format concerning patients lines are stored in this repository.
+Consult config file if you want to change the path.

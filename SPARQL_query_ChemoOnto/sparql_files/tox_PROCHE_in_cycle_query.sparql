@@ -1,0 +1,31 @@
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rom: <http://www.romedi.fr/romedi/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tox: <http://ontotox.owl#>
+PREFIX chemtox: <http://chemontotox.owl#>
+PREFIX chem: <http://chemonto.owl#>
+PREFIX pym: <http://PYM/>
+PREFIX pcui: <http://PYM/CUI/>
+prefix pmdr: <http://PYM/MDR/>
+
+SELECT ?tox_id ?tox_label ?tox_grade_type ?tox_date ?cycle_id ?cycle_label ?cycle_num ?cycle_startdate ?type_cui ?qst
+	{
+    ?tox_id rdfs:label ?tox_label.
+    ?tox_id tox:hasGrade ?tox_grade.
+    ?tox_grade a ?tox_grade_type.
+    ?tox_id time:hasTime ?tox_day.
+    ?tox_id a ?type_cui.
+    ?tox_day time:inXSDDate ?tox_date.
+    ?cycle_id time:hasTime ?cycle_int.
+    ?cycle_id rdfs:label ?cycle_label.
+    ?cycle_id chem:hasCycleNum ?cycle_num.
+    ?cycle_int time:inside ?tox_day.
+    ?cycle_int time:hasBeginning ?cycle_beg.
+    ?cycle_beg time:inXSDDate ?cycle_startdate.
+    FILTER( STRSTARTS(STR(?tox_grade_type),str(tox:)))
+    FILTER( STRSTARTS(STR(?type_cui),str(pcui:)))
+    FILTER(?cycle_id=<http://chemonto.owl/#CYCLE_None_1763278796_2021-08-20_1>)
+    FILTER(?qst='PROCHE')
+	}

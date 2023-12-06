@@ -1,0 +1,13 @@
+PREFIX rom: <http://www.romedi.fr/romedi/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tox: <http://ontotox.owl#>
+PREFIX chemtox: <http://chemontotox.owl#>
+PREFIX chem: <http://chemonto.owl#>
+
+SELECT  ?romINind ?romINlabel 
+            {
+    		?drugAdm chem:hasDrug ?drugInd.
+    		?drugInd chem:isRelatedToRomIN ?romINind.
+    		?romINind rdfs:label ?romINlabel.
+    		FILTER(?drugAdm=<http://chemonto.owl/#ADM__0_AC944_6>)
+		}

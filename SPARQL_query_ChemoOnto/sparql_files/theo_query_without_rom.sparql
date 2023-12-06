@@ -1,0 +1,24 @@
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rom: <http://www.romedi.fr/romedi/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX tox: <http://ontotox.owl#>
+PREFIX chemtox: <http://chemontotox.owl#>
+PREFIX chem: <http://chemonto.owl#>
+
+SELECT  ?drugAdm ?PRCKEY ?PRCNAME ?drugLabel ?dose ?cycleDuration ?dayAdmSTR ?is_bolus
+            {
+            ?PRC chem:hasName ?PRCNAME.
+            ?PRC chem:hasCycle ?cycle_theo.
+    		?cycle_theo chem:hasCyclePRCkey ?PRCKEY.
+    		?cycle_theo chem:hasAdministration ?drugAdm.
+    		?cycle_theo time:hasTime ?cycleInt.
+    		?cycleInt time:hasXSDDuration ?cycleDuration.
+    		?drugAdm chem:hasDrug ?drugInd.
+    		?drugInd rdfs:label ?drugLabel.
+    		?drugAdm chem:hasDose ?dose.
+    		?drugAdm chem:hasDayDrugAdm ?dayAdmSTR.
+    		?drugAdm chem:isBolus ?is_bolus.
+    		FILTER(?PRCKEY=1578)
+		}
