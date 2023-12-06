@@ -1,0 +1,71 @@
+DB_config: ../DB_config/db_config.yml
+bash_script_progress: ../bash_script_progress/
+dict_DCI: dict_DCI.json
+dict_anti_ade: dict_anti_ade.json
+dict_solvant: dict_solvant.json
+drug_dicts_path: ../../data/ChemoOnto_data/json_drug_dicts/
+empty: 20231206141914_ChemoOnto.owl
+followed: followed_vs_theorical_PRC_instantiated_20220429185203ChemOnto.owl
+i2b2_query_results:
+  cohort: ../../data/ChemoOnto_data/i2b2_query_results/DreFUCohort_20220524133039.csv
+  dict_pat_to_chimio_data_path: ../../data/ChemoOnto_data/i2b2_query_results/path_to_CHIMIOData_dict.yml
+  dir_ordered_pat_data: ../../data/ChemoOnto_data/i2b2_query_results/CHIMIOPatData/
+  dir_results: ../../data/ChemoOnto_data/i2b2_query_results/
+  ordered_pat_data: ../../data/ChemoOnto_data/i2b2_query_results/CHIMIOPatData.csv
+log_files:
+  attribute_error: ../../data/ChemoOnto_data/log_files/attributeError.csv
+  check_chimiodata_i2b2_query_results: ../../data/ChemoOnto_data/log_files/log_chimiodata_i2b2_query_results.txt
+  d2_before_d1: ../../data/ChemoOnto_data/log_files/d2_before_d1.csv
+  data_always_None: ../../data/ChemoOnto_data/log_files/data_always_None.csv
+  info_process_dict: ../../data/ChemoOnto_data/log_files/info_process_dict.yaml
+  no_chimio_data: ../../data/ChemoOnto_data/log_files/no_chimio_data.csv
+  path_to_dir: ../../data/ChemoOnto_data/log_files/
+  yaml_errors: ../../data/ChemoOnto_data/log_files/yaml_errors.csv
+namespaces:
+  chemonto: http://chemonto.owl
+  obo: http://purl.obolibrary.org/obo/
+onto:
+  local:
+    chemontotox: ../../2022-10_ChemOntoTox/owl_files/chemontotox.owl
+    empty_chemontotox: ../../empty_ontologies/empty_chemontotox.owl
+    my_uo: ../../data/ChemoOnto_data/UnitOntology/my_uo.owl
+    provo: ../../data/ChemoOnto_data/PROVO/2021-05_provo.owl
+    rdf: ../../external_ontologies/22-rdf-syntax-ns.rdf
+    romedi: ../../external_ontologies/Romedi.owl
+    time: ../../external_ontologies/202309_TO.owl
+    uo: ../../data/ChemoOnto_data/UnitOntology/uo-without-pato-references.owl
+  url:
+    pomr: https://www.w3.org/2001/sw/grddl-wg/doc29/problem-oriented-medical-record.owl
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns
+    skos: http://www.w3.org/TR/skos-reference/skos
+    skos_rdf: http://www.w3.org/TR/skos-reference/skos.rdf
+    time: http://www.w3.org/2006/time
+    time_rdf: http://www.w3.org/2006/time.rdf
+outputs: ../../graph_outputs/
+proxies:
+  http: null
+  https: null
+  no_proxy: null
+romediapp:
+  no_found_dci: ../romedi_no_found/dci.txt
+  no_found_pdt: ../romedi_no_found/pdt.txt
+  other_type: ../romedi/no_found/other_type.txt
+  url_detection: http://127.0.0.1:8892/IAMsystemRomediAPI-0.0.1/GetJSONdrugsDetected
+  url_detection_by_type: http://127.0.0.1:8892/IAMsystemRomediAPI-0.0.1/GetJSONdrugDetectedByType
+rxnorm:
+  rxcui_atc: ../../data/ChemoOnto_data/RxCUI_ATC/RxCUIATC.RRF
+  rxnconso: /media/alice/data/data_these/rxnorm/rrf/RXNCONSO.RRF
+sql_queries_i2b2:
+  dir_queries: ../sql_queries_i2b2/
+  ordered_pat_data: ../sql_queries_i2b2/2022-12-15_orderedCHIMIOPatientData.sql
+tables_data:
+  DCI: ../../data/ChemoOnto_data/theoretical_protocols_tables/CHIMIO_DCI_FILTER.csv
+  PRODUIT: ../../data/ChemoOnto_data/theoretical_protocols_tables/CHIMIO_PRODUIT_FILTER.csv
+  PROTOCOLS: ../../data/ChemoOnto_data/theoretical_protocols_tables/LIGNEPROTOCOL_FILTER.csv
+  chimiodata_dir: CHIMIO_data/
+  followed_lines_dir: ../../data/ChemoOnto_data/followed_lines/
+  patients_list: 2023-09-07_5_patients_list.csv
+  theoretical_PRC_dir: ../../data/ChemoOnto_data/theoretical_protocols_tables/
+temporal_reasoning:
+  combined: ../../data/ChemoOnto_data/TemporalReasoningSWRL/time-combined-swrl.csv
+theoretical: theo_AC_20231206141914_ChemoOnto.owl
