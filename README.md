@@ -25,7 +25,7 @@ designed to represent chemotherapy treatment courses.
 
 ## What you will find
 
-- ontological structure of ChemoOnto ```ChemoOnto_structure.owl``` [[1]](#1)
+- ontological structure of ChemoOnto ```ChemoOnto_structure.owl``` [[2]](#2)
 - the code to define ChemoOnto structure and to instantiate it with theoretical protocol and actual lines in ```src/``` repository.
 - examples of csv data tables used to instatiate the graph are in ```data/``` repository:
     - examples of csv with theoretical protocols in ```theroretical_protocols_tables/``` repository
