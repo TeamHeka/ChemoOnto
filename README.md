@@ -25,7 +25,7 @@ designed to represent chemotherapy treatment courses.
 
 ## What you will find
 
-- ontological structure of ChemoOnto in ```empty_ontologies/``` repository.
+- ontological structure of ChemoOnto ```ChemoOnto_structure.owl``` [[1]](#1)
 - the code to define ChemoOnto structure and to instantiate it with theoretical protocol and actual lines in ```src/``` repository.
 - examples of csv data tables used to instatiate the graph are in ```data/``` repository:
     - examples of csv with theoretical protocols in ```theroretical_protocols_tables/``` repository
@@ -62,3 +62,20 @@ python3 instantiatesChemoOntoWithFollowedLines.py -AC on -AA off -S off -R off
 ## ChemoOnto structure and an example of its instantiation
 
 ![ChemoOnto](images/ChemoOnto_and_an_example_of_its_instantiation.png "ChemoOnto structure and example of instantiation")
+
+
+## References
+
+<a id="2">[1]</a>
+Rogier, A., Rance, B., Coulet, A. (2023). ChemoOnto, an ontology to qualify the course of chemotherapies. Bio-ontologies COSI 2023, Poster.
+
+<a id="2">[2]</a>
+ChemoOnto on the BioPortal: https://bioportal.bioontology.org/ontologies/CHO
+
+<a id="2">[3]</a>
+ChemoOnto reuse in ChemoKG:
+Jong Ho Jhee, Alice Rogier, Dune Giraud, Emma Pinet, Brigitte Sabatier, Bastien Rance and Adrien Coulet. Representation and comparison of chemotherapy protocols with ChemoKG and graph embeddings, submitted to SWAT4HCLS 2024.
+
+<a id="2">[4]</a>
+ChemoKB on GitHub:
+https://github.com/TeamHeka/chemokb
